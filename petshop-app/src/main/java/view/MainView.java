@@ -16,14 +16,13 @@ import javax.swing.JLabel;
 import javax.swing.ImageIcon;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class MainView extends JFrame {
 
 	private JPanel contentPane;
 
-	/**
-	 * Launch the application.
-	 */
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
@@ -37,9 +36,6 @@ public class MainView extends JFrame {
 		});
 	}
 
-	/**
-	 * Create the frame.
-	 */
 	public MainView() {
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -93,23 +89,65 @@ public class MainView extends JFrame {
 		panel.add(separator);
 		panel.add(clientesMenuItem);
 		
-		JMenuItem mntmGerenciarPets = new JMenuItem("Gerenciar Pets");
-		sl_panel.putConstraint(SpringLayout.NORTH, mntmGerenciarPets, 76, SpringLayout.NORTH, panel);
-		sl_panel.putConstraint(SpringLayout.WEST, mntmGerenciarPets, 0, SpringLayout.WEST, panel);
-		sl_panel.putConstraint(SpringLayout.EAST, mntmGerenciarPets, 0, SpringLayout.EAST, separator);
-		panel.add(mntmGerenciarPets);
+		JMenuItem petsMenuItem = new JMenuItem("Gerenciar Pets");
+		sl_panel.putConstraint(SpringLayout.NORTH, petsMenuItem, 76, SpringLayout.NORTH, panel);
+		sl_panel.putConstraint(SpringLayout.WEST, petsMenuItem, 0, SpringLayout.WEST, panel);
+		sl_panel.putConstraint(SpringLayout.EAST, petsMenuItem, 0, SpringLayout.EAST, separator);
+		panel.add(petsMenuItem);
+		petsMenuItem.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				PetView framePet = new PetView();
+			}
+			@Override
+			public void mouseEntered(MouseEvent e) {
+				petsMenuItem.setBackground(UIManager.getColor("Button.focus"));
+			}
+			@Override
+			public void mouseExited(MouseEvent e) {
+				petsMenuItem.setBackground(UIManager.getColor("Button.background"));
+			}
+		});
 		
 		JMenuItem mntmGerenciarVenda = new JMenuItem("Gerenciar Venda");
 		sl_panel.putConstraint(SpringLayout.NORTH, mntmGerenciarVenda, 102, SpringLayout.NORTH, panel);
 		sl_panel.putConstraint(SpringLayout.WEST, mntmGerenciarVenda, 0, SpringLayout.WEST, panel);
 		sl_panel.putConstraint(SpringLayout.EAST, mntmGerenciarVenda, 0, SpringLayout.EAST, separator);
 		panel.add(mntmGerenciarVenda);
+		mntmGerenciarVenda.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				VendaView frameVenda = new VendaView();
+			}
+			@Override
+			public void mouseEntered(MouseEvent e) {
+				mntmGerenciarVenda.setBackground(UIManager.getColor("Button.focus"));
+			}
+			@Override
+			public void mouseExited(MouseEvent e) {
+				mntmGerenciarVenda.setBackground(UIManager.getColor("Button.background"));
+			}
+		});
 		
 		JMenuItem mntmGerenciarServio = new JMenuItem("Gerenciar Serviço");
 		sl_panel.putConstraint(SpringLayout.NORTH, mntmGerenciarServio, 128, SpringLayout.NORTH, panel);
 		sl_panel.putConstraint(SpringLayout.WEST, mntmGerenciarServio, 0, SpringLayout.WEST, panel);
 		sl_panel.putConstraint(SpringLayout.EAST, mntmGerenciarServio, 0, SpringLayout.EAST, separator);
 		panel.add(mntmGerenciarServio);
+		mntmGerenciarServio.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				ServicoView frameServico = new ServicoView();
+			}
+			@Override
+			public void mouseEntered(MouseEvent e) {
+				mntmGerenciarServio.setBackground(UIManager.getColor("Button.focus"));
+			}
+			@Override
+			public void mouseExited(MouseEvent e) {
+				mntmGerenciarServio.setBackground(UIManager.getColor("Button.background"));
+			}
+		});
 		
 		JMenuItem funcionariosMenuItem = new JMenuItem("Gerenciar Funcionários");
 		funcionariosMenuItem.addMouseListener(new MouseAdapter() {

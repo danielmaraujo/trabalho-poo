@@ -9,6 +9,8 @@ import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
+import controller.PetController;
+
 @Entity
 @Table (name = "servico")
 
@@ -25,11 +27,10 @@ public class Servico {
 	
 	private int forma_pagamento;
 	private int tipo_servico;
-	public Servico(int id_servico, int pet_id_pet, String funcionario_cpf, Date data, int forma_pagamento,
-			int tipo_servico) {
+	public Servico(String cliente_cpf, String nome_pet, String funcionario_cpf, Date data, int forma_pagamento, int tipo_servico) {
 		super();
-		this.id_servico = id_servico;
-		this.pet_id_pet = pet_id_pet;
+		PetController pet = new PetController();
+		this.pet_id_pet = pet.read(cliente_cpf, nome_pet).getId_pet();
 		this.funcionario_cpf = funcionario_cpf;
 		this.data = data;
 		this.forma_pagamento = forma_pagamento;

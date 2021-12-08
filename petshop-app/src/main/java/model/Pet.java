@@ -2,6 +2,7 @@ package model;
 
 import java.util.Date;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -20,6 +21,7 @@ public class Pet {
 	
 	private String nome;
 	private String especie;
+	@Column (name = "raça")
 	private String raca;
 	
 	@Temporal(value = TemporalType.DATE)
@@ -30,9 +32,8 @@ public class Pet {
 	public Pet() {
 	}
 
-	public Pet(int id_pet, String nome, String especie, String raca, Date data_nascimento, String cliente_cpf) {
+	public Pet(String nome, String especie, String raca, Date data_nascimento, String cliente_cpf) {
 		super();
-		this.id_pet = id_pet;
 		this.cliente_cpf = cliente_cpf;
 		this.nome = nome;
 		this.especie = especie;
