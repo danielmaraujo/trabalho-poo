@@ -22,12 +22,5 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="/usr/lib/eclipse/plugins/org.eclipse.core.databinding_1.10.100.v20200926-1123.jar" sourcepath="/usr/lib/eclipse/plugins/org.eclipse.core.databinding_1.10.100.v20200926-1123.jar"/>
-	<classpathentry kind="lib" path="/usr/lib/eclipse/plugins/org.eclipse.core.databinding.beans_1.8.0.v20210619-1111.jar" sourcepath="/usr/lib/eclipse/plugins/org.eclipse.core.databinding.beans_1.8.0.v20210619-1111.jar"/>
-	<classpathentry kind="lib" path="/usr/lib/eclipse/plugins/org.eclipse.core.databinding.observable_1.11.0.v20210722-1426.jar" sourcepath="/usr/lib/eclipse/plugins/org.eclipse.core.databinding.observable_1.11.0.v20210722-1426.jar"/>
-	<classpathentry kind="lib" path="/usr/lib/eclipse/plugins/org.eclipse.core.databinding.property_1.9.0.v20210619-1129.jar" sourcepath="/usr/lib/eclipse/plugins/org.eclipse.core.databinding.property_1.9.0.v20210619-1129.jar"/>
-	<classpathentry kind="lib" path="/usr/lib/eclipse/plugins/org.eclipse.jface.databinding_1.13.0.v20210619-1146.jar" sourcepath="/usr/lib/eclipse/plugins/org.eclipse.jface.databinding_1.13.0.v20210619-1146.jar"/>
-	<classpathentry kind="lib" path="/usr/lib/eclipse/plugins/org.eclipse.equinox.common_3.15.0.v20210518-0604.jar" sourcepath="/usr/lib/eclipse/plugins/org.eclipse.equinox.common_3.15.0.v20210518-0604.jar"/>
-	<classpathentry kind="lib" path="/usr/lib/eclipse/plugins/com.ibm.icu_67.1.0.v20200706-1749.jar" sourcepath="/usr/lib/eclipse/plugins/com.ibm.icu_67.1.0.v20200706-1749.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
